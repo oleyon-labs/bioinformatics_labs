@@ -40,3 +40,11 @@ def wagner_fisher(s1, s2):
         prev_row = curr_row[:]
     
     return curr_row[m]
+
+
+
+
+print(wagner_fisher('saturday', 'sunday'))
+print(wagner_fisher('polynomial', 'exponential'))
+print(wagner_fisher('aaaaa', 'bb'))
+print(wagner_fisher('epolynomial', 'polynomial'))
