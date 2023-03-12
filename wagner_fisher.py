@@ -17,7 +17,7 @@ def wagner_fisher_old(s1, s2):
             if s1[i - 1] == s2[j - 1]:
                 dist[i][j] = dist[i - 1][j - 1]
             else:
-                dist[i][j] = min(dist[i - 1][j], dist[i][j - 1], dist[i - 1][j - 1]) + 1
+                dist[i][j] = min(dist[i - 1][j], dist[i][j - 1], dist[i - 1][j - 1]) + 2
 
     return dist[n][m]
 
@@ -36,7 +36,7 @@ def wagner_fisher(s1, s2):
             if s1[i - 1] == s2[j - 1]:
                 curr_row[j] = prev_row[j - 1]
             else:
-                curr_row[j] = min(prev_row[j], curr_row[j - 1], prev_row[j - 1]) + 1
+                curr_row[j] = min(prev_row[j], curr_row[j - 1], prev_row[j - 1]) + 2
         prev_row = curr_row[:]
     
     return curr_row[m]
@@ -44,7 +44,8 @@ def wagner_fisher(s1, s2):
 
 
 
-print(wagner_fisher('saturday', 'sunday'))
-print(wagner_fisher('polynomial', 'exponential'))
-print(wagner_fisher('aaaaa', 'bb'))
-print(wagner_fisher('epolynomial', 'polynomial'))
+#print(wagner_fisher('saturday', 'sunday'))
+#print(wagner_fisher('polynomial', 'exponential'))
+#print(wagner_fisher('aaaaa', 'bb'))
+#print(wagner_fisher('epolynomial', 'polynomial'))
+print(wagner_fisher('cakab','abac'))

@@ -18,8 +18,8 @@ def find_substring_indices(s, sub):
 
 
 
-s = "hello worldo"
-sub = "o"
+s = "abaaababab"
+sub = "abab"
 is_not_equal.count = 0
 indices = find_substring_indices(s, sub)
 print(f"Function has been called {is_not_equal.count} times.")
